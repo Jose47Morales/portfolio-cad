@@ -23,8 +23,8 @@ Este proyecto no es solo un clon técnico, sino una **carta de presentación int
 - [] Modo clásico (Sketchpad 1963) vs Modo moderno.
 
 ## Mockup Inicial
-![Mockup](<img width="1360" height="800" alt="Home" src="https://github.com/user-attachments/assets/ce37bd9e-0169-44c7-add2-9fd079120cca" />)
-*(Diseño preliminar de la interfaz retro-futurista)*
+<img width="1360" height="800" alt="Home" src="https://github.com/user-attachments/assets/ce37bd9e-0169-44c7-add2-9fd079120cca" />
+*Diseño preliminar de la interfaz retro-futurista*
 
 ## Inspiración
 - Ivan Sutherland, *Sketchpad: A Man-Machine Graphical Communication System* (1963).
