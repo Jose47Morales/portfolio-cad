@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "@fontsource/share-tech-mono";
+
+/* Retro-futuristic style */
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff00;
+  background-color: black;
+}
+
+.font-blue {
+  color: #08C589;
+}
