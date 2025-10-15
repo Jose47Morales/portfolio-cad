@@ -607,7 +607,7 @@ const SystemInfo = ({ onTerminalOpen, onMenuToggle }) => {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf';
+    link.href = '/Jose_Morales_CV.pdf';
     link.download = 'Jose_Morales_CV.pdf';
     link.click();
   };
@@ -1083,7 +1083,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
             <div className="w-full lg:w-96">
               <div className="border border-green-600 p-4 mb-4 h-48 sm:h-64 flex items-center justify-center">
                 <img 
-                  src="./src/images/profile.png" 
+                  src="/images/profile.png" 
                   alt="Jose Morales"
                   className="h-full object-cover"
                 />
@@ -1121,7 +1121,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               <ProjectCard
                 title="POS System"
                 description="Point of Sale system for retail"
-                imageUrl="/src/images/pos-system.png"
+                imageUrl="/images/pos-system.png"
                 githubUrl="https://github.com/Jose47Morales/discoteca-pos"
                 stack={["Laravel", "MySQL", "TailwindCSS", "Blade"]}
                 features={[
@@ -1136,7 +1136,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               <ProjectCard 
                 title="FlySmart"
                 description="Flight route optimization platform"
-                imageUrl="/src/images/flysmart.png"
+                imageUrl="/images/flysmart.png"
                 githubUrl="https://github.com/Jose47Morales/flysmart"
                 stack={["C++", "Flask", "Dijkstra Algorithm", "JavaScript"]}
                 features={[
@@ -1152,7 +1152,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               <ProjectCard
                 title="Game Control with Computer Vision"
                 description="Interactive game using hand gestures"
-                imageUrl="/src/images/game-cv.png"
+                imageUrl="/images/game-cv.png"
                 videoUrl="https://www.youtube.com/watch?v=u31dSN0eUxA&t=112s"
                 stack={["JavaScript", "C#"]}
                 features={[
@@ -1290,7 +1290,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                 <button
                   onClick={() => {
                     const link = document.createElement('a');
-                    link.href = '/cv.pdf';
+                    link.href = '/Jose_Morales_CV.pdf';
                     link.download = 'Jose_Morales_CV.pdf';
                     link.click();
                   }}
