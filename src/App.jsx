@@ -105,7 +105,7 @@ const TerminalCommandLine = ({ onComand }) => {
       const file = args[0];
       if (!file) return ['cat: missing file operand'];
       if (file === 'ABOUT.sketch') {
-        onComand('navigate:About.sketch');
+        onComand('navigate:ABOUT.sketch');
         return ['Loading ABOUT.sketch...'];
       }
       if (file === 'PROJECTS.sketch') {
@@ -118,7 +118,7 @@ const TerminalCommandLine = ({ onComand }) => {
       }
       if (file === 'CERTIFICATIONS.sketch') {
         onComand('navigate:CERTIFICATIONS.sketch');
-        return ['Loading CERTIFICATIONS.sletch...']
+        return ['Loading CERTIFICATIONS.sketch...']
       }
       if (file === 'CONTACT.sketch') {
         onComand('navigate:CONTACT.sketch');
