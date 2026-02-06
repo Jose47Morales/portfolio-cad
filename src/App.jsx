@@ -551,11 +551,11 @@ const LoadingScreen = ({ onLoadComplete }) => {
   return (
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
       <div className="w-3/4 max-w-2xl">
-        <div className="border-2 border-green 500 p-6">
+        <div className="border-2 border-green-500 p-6">
           <div className="text-green-400 font-mono text-sm mb-4">
             <div className="text-xl mb-4 text-green-500">◉ JOSE47MORALES.PORTFOLIO v1.0</div>
             <div className="mb-2">BIOS Version: 1.0.0</div>
-            <div className="mb-4">Copyright (C) 2025 Jose Morales. All rights reserved.</div>
+            <div className="mb-4">Copyright (C) 2026 Jose Morales. All rights reserved.</div>
           </div>
 
           <div className="border-t border-green-600 pt-4 mb-4">
@@ -1119,6 +1119,20 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
             </h2>
             <div className="space-y-6">
               <ProjectCard
+                title="WhatsApp Chatbot"
+                description="Chatbot for WhatsApp integration"
+                imageUrl="/images/whatsapp.png"
+                githubUrl="https://github.com/Jose47Morales/ventas-automatizadas"
+                stack={["Node.js", "n8n", "PostgreSQL", "WhatsApp Cloud API"]}
+                features={[
+                  "Automated WhatsApp Sales Flow",
+                  "Rule-Based Conversation Engine",
+                  "Integration with Business Logic and Data Sources",
+                ]}
+                type="Conversational Automation System"
+                year="2025"
+              />
+              <ProjectCard
                 title="POS System"
                 description="Point of Sale system for retail"
                 imageUrl="/images/pos-system.png"
@@ -1254,7 +1268,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               </div>
               <div className="border border-green-600 p-3 text-center">
                 <div className="text-2xl text-green-500 mb-1">
-                  <TerminalText text="2025" speed={50} />
+                  <TerminalText text="2026" speed={50} />
                 </div>
                 <div className="text-xs">
                   <TerminalText text="LAST YEAR" speed={40} />
@@ -1344,7 +1358,7 @@ const StatusBar = ({ currentFile, mousePos }) => {
       <span>X: {mousePos.x.toFixed(2)}   Y: {mousePos.y.toFixed(2)}</span>
       <span>FILE: {currentFile}</span>
       <span>VIEWING PROFILE</span>
-      <span>LAST SAVE: 2025</span>
+      <span>LAST SAVE: 2026</span>
       <span className="border border-green-500 px-2 text-green-500">READY</span>
     </div>
   );
