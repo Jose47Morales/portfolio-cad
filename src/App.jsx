@@ -69,10 +69,10 @@ const MatrixRain = ({ active, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black cursor-pointer" onClick={onClose}>
       <canvas ref={canvasRef} className="w-full h-full" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -transalte-y-1/2 text-green-400 font-mono text-2xl border-2 border-green-500 p-6 bg-black">
-          <div className="mb-2">MATRIX MODE ACTIVATED</div>
-          <div className="text-sm">Click anywhere to exit</div>
-        </div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -transalte-y-1/2 text-green-400 font-mono text-2xl border-2 border-green-500 p-6 bg-black">
+        <div className="mb-2">MATRIX MODE ACTIVATED</div>
+        <div className="text-sm">Click anywhere to exit</div>
+      </div>
     </div>
   );
 };
@@ -85,9 +85,9 @@ const TerminalCommandLine = ({ onComand }) => {
   const inputRef = useRef(null);
 
   const commands = {
-    help: () => ['Available commands', ' help    - Show this hel message', ' about   - Display information about Jose', ' skills  - List technical skills', ' ls      - List available files', ' cat     - Read file content (e.g., cat ABOUT.sketch)', ' clear   - Clear terminal', ' matrix  - Activate matrix mode', ' whoami  - Display current user', ' date    - Show current date and time', ' pandasay  - Make the panda say something', ' hack    - Start hacking sequence', ' exit    - Close terminal', ],
-    about: () => ['Jose Morales - Systems Engineer', '├─ Data Science & Machine Learning', '├─ Computer Vision Expert', '├─ ML Diploma Certified', '└─ Tech Event Assistant' ],
-    skills: () => ['Technical Stack:', 'Python     [████████░░] 80%', 'C++        [████████░░] 80%', 'Java       [██████░░░░] 60%', 'R          [███████░░░] 70%', 'OpenCV     [██████░░░░] 60%', 'TensorFlow [███████░░░] 70%', 'JavaScript [███████░░░] 70%', 'CSS        [█████████░] 90%', 'Node.js    [██████░░░░] 60%', 'Pandas     [████████░░] 80%' ],
+    help: () => ['Available commands', ' help    - Show this hel message', ' about   - Display information about Jose', ' skills  - List technical skills', ' ls      - List available files', ' cat     - Read file content (e.g., cat ABOUT.sketch)', ' clear   - Clear terminal', ' matrix  - Activate matrix mode', ' whoami  - Display current user', ' date    - Show current date and time', ' pandasay  - Make the panda say something', ' hack    - Start hacking sequence', ' exit    - Close terminal',],
+    about: () => ['Jose Morales - Systems Engineer', '├─ Data Science & Machine Learning', '├─ Computer Vision Expert', '├─ ML Diploma Certified', '└─ Tech Event Assistant'],
+    skills: () => ['Technical Stack:', 'Python     [████████░░] 80%', 'C++        [████████░░] 80%', 'Java       [██████░░░░] 60%', 'R          [███████░░░] 70%', 'OpenCV     [██████░░░░] 60%', 'TensorFlow [███████░░░] 70%', 'JavaScript [███████░░░] 70%', 'CSS        [█████████░] 90%', 'Node.js    [██████░░░░] 60%', 'Pandas     [████████░░] 80%'],
     ls: () => ['ABOUT.sketch', 'PROJECTS.sketch', 'SKILLS.sketch', 'CERTIFICATIONS.sketch', 'CONTACT.sketch'],
     whoami: () => ['jose47morales'],
     date: () => [new Date().toString()],
@@ -96,9 +96,9 @@ const TerminalCommandLine = ({ onComand }) => {
       const message = args.join(' ') || '¡Bamboo!';
       return [' ' + '_'.repeat(message.length + 2), `< ${message} >`, ' ' + '_'.repeat(message.length + 2), '⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀', '⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣦⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀', '⠀⠀⠀⠀⠀⠀⢿⣿⠟⠋⠉⠀⠀⠀⠀⠉⠑⠢⣄⡀⠀⠀⠀⠀⠀', '⠀⠀⠀⠀⠀⢠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣿⣦⡀', '⠀⣀⠀⠀⢀⡏⠀⢀⣴⣶⣶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⠇', '⣾⣿⣿⣦⣼⡀⠀⢺⣿⣿⡿⠃⠀⠀⠀⠀⣠⣤⣄⠀⠀⠈⡿⠋⠀', '⢿⣿⣿⣿⣿⣇⠀⠤⠌⠁⠀⡀⢲⡶⠄⢸⣏⣿⣿⠀⠀⠀⡇⠀⠀', '⠈⢿⣿⣿⣿⣿⣷⣄⡀⠀⠀⠈⠉⠓⠂⠀⠙⠛⠛⠠⠀⡸⠁⠀⠀', '⠀⠀⠻⣿⣿⣿⣿⣿⣿⣷⣦⣄⣀⠀⠀⠀⠀⠑⠀⣠⠞⠁⠀⠀⠀', '⠀⠀⠀⢸⡏⠉⠛⠛⠛⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀', '⠀⠀⠀⠸⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠛⢿⣿⣿⣿⣿⡄⠀⠀⠀⠀', '⠀⠀⠀⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⡀⠀⠀⠀'];
     },
-    matrix: () => {onComand('matrix'); return ['Activating Matrix mode...']; },
+    matrix: () => { onComand('matrix'); return ['Activating Matrix mode...']; },
     hack: () => {
-      const lines = [ 'Initializing hack sequence...', 'Connecting to mainframe...', 'Bypassing firewall...', 'Accessing database...', 'Downloading files... [####      ] 40%', 'WARNING: ICE detected!', 'Deploying countermeasures...', 'Success! You are now a 1337 h4x0r'];
+      const lines = ['Initializing hack sequence...', 'Connecting to mainframe...', 'Bypassing firewall...', 'Accessing database...', 'Downloading files... [####      ] 40%', 'WARNING: ICE detected!', 'Deploying countermeasures...', 'Success! You are now a 1337 h4x0r'];
       return lines;
     },
     cat: (args) => {
@@ -138,7 +138,7 @@ const TerminalCommandLine = ({ onComand }) => {
 
     if (commands[command]) {
       const output = commands[command](args);
-      if (command === 'clear'){
+      if (command === 'clear') {
         setHistory(['']);
       } else {
         setHistory([...newHistory, ...output, '']);
@@ -232,15 +232,15 @@ const SnakeGame = ({ active, onClose }) => {
         ctx.stroke();
       }
 
-      if (started && gameActive && (dx !==0 || dy !== 0)) {
+      if (started && gameActive && (dx !== 0 || dy !== 0)) {
         const head = { x: snake[0].x + dx, y: snake[0].y + dy };
-        
+
         if (head.x < 0 || head.x >= titleCount || head.y < 0 || head.y >= titleCount) {
-        gameActive = false;
-        setGameOver(true);
-        return;
+          gameActive = false;
+          setGameOver(true);
+          return;
         }
-        
+
         for (let segment of snake) {
           if (head.x === segment.x && head.y === segment.y) {
             gameActive = false;
@@ -251,7 +251,7 @@ const SnakeGame = ({ active, onClose }) => {
 
         snake.unshift(head);
 
-        if (head.x === food.x && head.y === food.y){
+        if (head.x === food.x && head.y === food.y) {
           setScore(s => s + 10);
           food = {
             x: Math.floor(Math.random() * titleCount),
@@ -382,13 +382,13 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, stack,
               <div key={i} className="border border-green-700"></div>
             ))}
           </div>
-          <img 
-            src={imageUrl} 
+          <img
+            src={imageUrl}
             alt={title}
             className="h-full object-cover relative z-10 transition-opacity duration-500"
             style={{
               opacity: imageLoaded ? 1 : 0
-            }} 
+            }}
             onLoad={() => setImageLoaded(true)}
             onError={(e) => {
               e.target.style.display = 'none';
@@ -417,14 +417,14 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, stack,
                 </a>
               )}
               {videoUrl && (
-                <a 
+                <a
                   href={videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-green-600 px-2 py-1 text-xs hover:bg-green-900 transition-all"
                 >
-                    VIDEO
-                  </a>
+                  VIDEO
+                </a>
               )}
             </div>
           </div>
@@ -443,29 +443,28 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, stack,
             </div>
           </div>
 
-          <button 
+          <button
             onClick={() => setExpanded(!expanded)}
             className="border border-green-600 px-3 py-1 text-xs hover:bg-green-900 transition-all w-full text-left">
-              {expanded ? '▼' : '▶'} {expanded ? 'HIDE' : 'SHOW'} DETAILS
-            </button>
+            {expanded ? '▼' : '▶'} {expanded ? 'HIDE' : 'SHOW'} DETAILS
+          </button>
 
-            <div 
-              className={`overflow-hidden transition-all duration-300 ${
-                expanded ? 'max-h-96 mt-3' : 'max-h-0'
+          <div
+            className={`overflow-hidden transition-all duration-300 ${expanded ? 'max-h-96 mt-3' : 'max-h-0'
               }`}
-            >
-              <div className="border border-green-600 p-3 bg-black">
-                <div className="text-green-500 text-xs mb-2">FEATURES:</div>
-                <div className="space-y-1 text-xs">
-                  {features.map((feature, i) => (
-                    <div key={i} className="flex items-start">
-                      <span className="text-greeen-500 mr-2">├─</span>
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
+          >
+            <div className="border border-green-600 p-3 bg-black">
+              <div className="text-green-500 text-xs mb-2">FEATURES:</div>
+              <div className="space-y-1 text-xs">
+                {features.map((feature, i) => (
+                  <div key={i} className="flex items-start">
+                    <span className="text-greeen-500 mr-2">├─</span>
+                    <span>{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
         </div>
       </div>
 
@@ -534,7 +533,7 @@ const LoadingScreen = ({ onLoadComplete }) => {
         setTimeout(() => {
           setProgress(step.progress);
           setLoadingText(step.text);
-          setLogs((prev) => [...prev, `[${new Date().toLocaleTimeString()}] ${step.text}`]  );
+          setLogs((prev) => [...prev, `[${new Date().toLocaleTimeString()}] ${step.text}`]);
           currentStep++;
           runSequence();
         }, step.delay);
@@ -616,7 +615,7 @@ const SystemInfo = ({ onTerminalOpen, onMenuToggle }) => {
     <div className="flex justify-between items-center px-2 sm:px-4 py-2 border-b border-cyan-600 text-green-400 font-mono text-xs sm:text-sm">
       <div className="flex items-center gap-2">
         <button onClick={onMenuToggle} className="md:hidden border border-green-600 px-2 py-1 hover-bg-green-900">☰</button>
-        <span 
+        <span
           className="text-green-500 text-xl cursor-pointer hover:animate-pulse"
           onClick={onTerminalOpen}
           title="Click to open terminal"
@@ -655,48 +654,48 @@ const DrawingTools = ({ selectedTool, setSelectedTool, gridOn, setGridOn, onClea
   ]
 
   return (
-      <>
-        {isOpen && <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30" onClick={onClose} />}
-        <div className={`w-64 border-r border-green-600 p-3 text-green-400 font-mono text-xs bg-black overflow-y-auto fixed lg:static inset-y-0 left-0 z-40 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
-          <button onClick={onClose} className="lg:hidden absolute top-2 right-2 text-red-400 border border-red-600 px-2 py-1 hover:bg-red-900">✕</button>
-          
-          <div className="mb-4">
-            <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">DRAWING TOOLS</h3>
-            {tools.map(tool => (
-              <button key={tool} className={`w-full text-left px-3 py-2 mb-1 border border-green-600 transition-all ${selectedTool === tool ? "bg-green-500 text-black" : "hover:bg-green-900"}`} onClick={() => setSelectedTool(tool)}>
-                {tool === "SELECT" && "→ "}{tool === "LINE" && "/ "}{tool === "CIRCLE" && "○ "}{tool === "RECT" && "□ "}{tool}
-              </button>
-            ))}
-          </div>
+    <>
+      {isOpen && <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30" onClick={onClose} />}
+      <div className={`w-64 border-r border-green-600 p-3 text-green-400 font-mono text-xs bg-black overflow-y-auto fixed lg:static inset-y-0 left-0 z-40 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+        <button onClick={onClose} className="lg:hidden absolute top-2 right-2 text-red-400 border border-red-600 px-2 py-1 hover:bg-red-900">✕</button>
 
-          <div className="mb-4">
-            <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">COLOR</h3>
-            {colors.map(color => (
-              <button key={color.name} className={`w-full text-left px-3 py-2 mb-1 border border-green-600 transition-all ${drawColor === color.value ? "bg-green-900" : "hover:bg-green-900"}`} style={{ color: color.value }} onClick={() => setDrawColor(color.value)}>
-                ■ {color.name}
-              </button>
-            ))}
-          </div>
-
-          <div className="mb-4">
-            <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">PRECISION</h3>
-            <button className={`w-full px-3 py-2 border border-green-600 transition-all ${gridOn ? "bg-green-500 text-black" : ""}`} onClick={() => setGridOn(!gridOn)}>GRID: {gridOn ? "ON" : "OFF"}</button>
-          </div>
-
-          <div className="mb-4">
-            <button className="w-full px-3 py-2 mb-2 border border-green-600 hover:bg-blue-900 text-blue-400 transition-all" onClick={onUndo}>↶ UNDO</button>
-            <button className="w-full px-3 py-2 border border-green-600 hover:bg-red-900 text-red-400 transition-all" onClick={onClearCanvas}>✕ CLEAR CANVAS</button>
-          </div>
-
-          <div>
-            <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">SYSTEM</h3>
-            <div className="mb-1">MODE: DRAFT</div>
-            <div>UNITS: MM</div>
-          </div>
+        <div className="mb-4">
+          <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">DRAWING TOOLS</h3>
+          {tools.map(tool => (
+            <button key={tool} className={`w-full text-left px-3 py-2 mb-1 border border-green-600 transition-all ${selectedTool === tool ? "bg-green-500 text-black" : "hover:bg-green-900"}`} onClick={() => setSelectedTool(tool)}>
+              {tool === "SELECT" && "→ "}{tool === "LINE" && "/ "}{tool === "CIRCLE" && "○ "}{tool === "RECT" && "□ "}{tool}
+            </button>
+          ))}
         </div>
-      </>
-    );
-  };
+
+        <div className="mb-4">
+          <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">COLOR</h3>
+          {colors.map(color => (
+            <button key={color.name} className={`w-full text-left px-3 py-2 mb-1 border border-green-600 transition-all ${drawColor === color.value ? "bg-green-900" : "hover:bg-green-900"}`} style={{ color: color.value }} onClick={() => setDrawColor(color.value)}>
+              ■ {color.name}
+            </button>
+          ))}
+        </div>
+
+        <div className="mb-4">
+          <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">PRECISION</h3>
+          <button className={`w-full px-3 py-2 border border-green-600 transition-all ${gridOn ? "bg-green-500 text-black" : ""}`} onClick={() => setGridOn(!gridOn)}>GRID: {gridOn ? "ON" : "OFF"}</button>
+        </div>
+
+        <div className="mb-4">
+          <button className="w-full px-3 py-2 mb-2 border border-green-600 hover:bg-blue-900 text-blue-400 transition-all" onClick={onUndo}>↶ UNDO</button>
+          <button className="w-full px-3 py-2 border border-green-600 hover:bg-red-900 text-red-400 transition-all" onClick={onClearCanvas}>✕ CLEAR CANVAS</button>
+        </div>
+
+        <div>
+          <h3 className="text-green-500 mb-2 pb-1 border-b border-green-700">SYSTEM</h3>
+          <div className="mb-1">MODE: DRAFT</div>
+          <div>UNITS: MM</div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 const DrawingCanvas = ({ selectedTool, gridOn, drawColor, shapes, setShapes }) => {
   const canvasRef = useRef(null);
@@ -853,10 +852,9 @@ const PortfolioNav = ({ currentFile, onFileChange, isTransitioning, isOpen, onCl
           {files.map((file) => (
             <li
               key={file}
-              className={`cursor-pointer mb-1 px-3 py-2 border border-cyan-600 transition-all ${
-                currentFile === file ? "bg-cyan-500 text-black" : "hover:bg-cyan-900"
-              } ${isTransitioning ? "opacity-50 pointer-events-none" : ""}`}
-              onClick={() => {onFileChange(file); onClose(); }}
+              className={`cursor-pointer mb-1 px-3 py-2 border border-cyan-600 transition-all ${currentFile === file ? "bg-cyan-500 text-black" : "hover:bg-cyan-900"
+                } ${isTransitioning ? "opacity-50 pointer-events-none" : ""}`}
+              onClick={() => { onFileChange(file); onClose(); }}
             >
               → {file}
             </li>
@@ -867,7 +865,7 @@ const PortfolioNav = ({ currentFile, onFileChange, isTransitioning, isOpen, onCl
         </div>
       </div>
     </>
-    
+
   );
 };
 
@@ -889,7 +887,7 @@ const SkillBar = ({ name, percentage, delay = 0 }) => {
         <span>{percentage}%</span>
       </div>
       <div className="h-4 border border-green-600 relative bg-black">
-        <div 
+        <div
           className="h-full bg-green-500 transition-all duration-1000 ease-out"
           style={{ width: `${width}%` }}></div>
         <div className="absolute inset-0 grid grid-cols-10 opacity-30">
@@ -922,11 +920,11 @@ const CertificationBadge = ({ title, issuer, date, credentialId, credentialUrl, 
             <h3 className="text-green-400 font-bold text-sm sm:text-base">
               {unlocked ? <TerminalText text={title} speed={30} /> : title}
             </h3>
-              {unlocked && (
-                <span className="text-green-500 text-xs border border-green-500 px-2 py-0.5 whitespace-nowrap">
-                  UNLOCKED
-                </span>
-              )}
+            {unlocked && (
+              <span className="text-green-500 text-xs border border-green-500 px-2 py-0.5 whitespace-nowrap">
+                UNLOCKED
+              </span>
+            )}
           </div>
 
           <div className="text-xs space-y-1 text-green-500">
@@ -936,7 +934,7 @@ const CertificationBadge = ({ title, issuer, date, credentialId, credentialUrl, 
           </div>
 
           {credentialUrl && (
-            <a 
+            <a
               href={credentialUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -996,15 +994,25 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
   const [showContent, setShowContent] = useState(false);
 
   const skills = [
+    { name: "PHP", percentage: 90 },
+    { name: "Laravel", percentage: 90 },
+    { name: "PostgreSQL", percentage: 80 },
+    { name: "MySQL", percentage: 80 },
+    { name: "Node.js", percentage: 70 },
+    { name: "Docker", percentage: 65 },
+    { name: "JavaScript", percentage: 70 },
+    { name: "REST APIs", percentage: 85 },
+    { name: "Git", percentage: 85 },
+  ];
+
+  const otherSkills = [
     { name: "Python", percentage: 80 },
     { name: "C++", percentage: 80 },
     { name: "Java", percentage: 60 },
     { name: "R", percentage: 70 },
     { name: "OpenCV", percentage: 60 },
     { name: "TensorFlow", percentage: 70 },
-    { name: "JavaScript", percentage: 70 },
     { name: "CSS", percentage: 90 },
-    { name: "Node.js", percentage: 60 },
     { name: "Pandas", percentage: 80 },
   ];
 
@@ -1020,12 +1028,12 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
         <div className="absolute top-4 left-4 z-10 border border-green-500 bg-black px-3 py-2 text-green-500 font-mono text-sm">
           DRAWING MODE: {selectedTool} | COLOR: <span style={{ color: drawColor }}>■</span>
         </div>
-        <DrawingCanvas 
+        <DrawingCanvas
           selectedTool={selectedTool}
           gridOn={gridOn}
           drawColor={drawColor}
           shapes={shapes}
-          setShapes={setShapes} 
+          setShapes={setShapes}
         />
       </div>
     );
@@ -1082,8 +1090,8 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
 
             <div className="w-full lg:w-96">
               <div className="border border-green-600 p-4 mb-4 h-48 sm:h-64 flex items-center justify-center">
-                <img 
-                  src="/images/profile.png" 
+                <img
+                  src="/images/profile.png"
                   alt="Jose Morales"
                   className="h-full object-cover"
                 />
@@ -1147,7 +1155,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                 year="2025"
               />
 
-              <ProjectCard 
+              <ProjectCard
                 title="FlySmart"
                 description="Flight route optimization platform"
                 imageUrl="/images/flysmart.png"
@@ -1158,7 +1166,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                   "Real-time cost calculation",
                   "Interactive route visualization",
                   "Multi-criteria optimization"
-                ]}  
+                ]}
                 type="Web Application"
                 year="2025"
               />
@@ -1199,12 +1207,29 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               </div>
             </div>
           </div>
+
+          <div>
+            <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
+              <TerminalText text="OTHER_SKILLS" speed={50} /></h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                {otherSkills.slice(0, 5).map((skill, i) => (
+                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={i * 100} />
+                ))}
+              </div>
+              <div>
+                {otherSkills.slice(5).map((skill, i) => (
+                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={(i + 5) * 100} />
+                ))}
+              </div>
+            </div>
+          </div>
         )}
 
         {currentFile === "CERTIFICATIONS.sketch" && (
           <div>
             <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
-              <TerminalText text="CERTIFICATIONS & ACHIEVEMENTS" speed={50}/>
+              <TerminalText text="CERTIFICATIONS & ACHIEVEMENTS" speed={50} />
             </h2>
 
             <div className="mb-6 border border-green-500 p-4 bg-black">
@@ -1213,12 +1238,12 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                 <div className="text-green-400 text-2xl font-bold">3/3</div>
               </div>
               <div className="mt-2 h-3 border border-green-600 relative bg-black">
-                <div className="h-full bg-green-500 transition-all duration-2000" style={{width: '100%'}} />
+                <div className="h-full bg-green-500 transition-all duration-2000" style={{ width: '100%' }} />
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <CertificationBadge 
+              <CertificationBadge
                 icon="👁"
                 title="Attendance at the 5th International Congress on Systems Engineering - VCIIS2023"
                 issuer="Universidad de Córdoba"
@@ -1229,7 +1254,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               />
 
               <CertificationBadge
-                icon="🖨"  
+                icon="🖨"
                 title="Machine Learning Diploma"
                 issuer="Universidad de Córdoba"
                 date="2024"
@@ -1239,7 +1264,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               />
 
               <CertificationBadge
-                icon="🖥"  
+                icon="🖥"
                 title="Systems Engineering"
                 issuer="Universidad de Córdoba"
                 date="2025"
@@ -1295,10 +1320,10 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <div className="text-green-500 text-lg mb-2">
-                    <TerminalText text="CURRICULUM VITAE" speed={40}/>
+                    <TerminalText text="CURRICULUM VITAE" speed={40} />
                   </div>
                   <div className="text-xs">
-                    <TerminalText text="Download my complete resume in PDF format" speed={40}/>
+                    <TerminalText text="Download my complete resume in PDF format" speed={40} />
                   </div>
                 </div>
                 <button
@@ -1465,18 +1490,18 @@ export default function App() {
       {terminalOpen && (
         <div className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4 sm:p-8">
           <div className="w-full max-w-4xl h-2/3 border-2 border-green-500 bg-black relative">
-          <div className="absolute top-2 right-2">
-            <button
-              onClick={() => setTerminalOpen(false)}
-              className="border border-green-600 px-3 py-1 text-xs hover:bg-red-900 text-red 400"
-            >
-              ✕ CLOSE
-            </button>
+            <div className="absolute top-2 right-2">
+              <button
+                onClick={() => setTerminalOpen(false)}
+                className="border border-green-600 px-3 py-1 text-xs hover:bg-red-900 text-red 400"
+              >
+                ✕ CLOSE
+              </button>
+            </div>
+            <TerminalCommandLine onComand={handleTerminalCommand} />
           </div>
-          <TerminalCommandLine onComand={handleTerminalCommand} />
         </div>
-      </div>
-    )}
+      )}
       <FileTransition
         show={isTransitioning}
         fileName={pendingFile}
@@ -1484,7 +1509,7 @@ export default function App() {
       />
       <SystemInfo onTerminalOpen={() => setTerminalOpen(true)} onMenuToggle={() => setRightSidebarOpen(!rightSidebarOpen)} />
       <div className="flex flex-1 overflow-hidden">
-        <DrawingTools 
+        <DrawingTools
           selectedTool={selectedTool}
           setSelectedTool={setSelectedTool}
           gridOn={gridOn}
@@ -1496,20 +1521,20 @@ export default function App() {
           isOpen={leftSidebarOpen}
           onClose={() => setLeftSidebarOpen(false)}
         />
-        <PortfolioNav 
-          currentFile={currentFile} 
+        <PortfolioNav
+          currentFile={currentFile}
           onFileChange={handleFileChange}
-          isTransitioning={isTransitioning} 
+          isTransitioning={isTransitioning}
           isOpen={rightSidebarOpen}
           onClose={() => setRightSidebarOpen(false)}
         />
-        <ContentArea 
-          currentFile={currentFile} 
-          selectedTool={selectedTool} 
+        <ContentArea
+          currentFile={currentFile}
+          selectedTool={selectedTool}
           gridOn={gridOn}
           drawColor={drawColor}
           shapes={shapes}
-          setShapes={setShapes} 
+          setShapes={setShapes}
         />
       </div>
       <StatusBar currentFile={currentFile} mousePos={mousePos} />
