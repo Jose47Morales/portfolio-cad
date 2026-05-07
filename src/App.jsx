@@ -369,7 +369,7 @@ const SnakeGame = ({ active, onClose }) => {
   );
 };
 
-const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, stack, features, type, year }) => {
+const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, liveUrl, stack, features, type, year }) => {
   const [expanded, setExpanded] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -424,6 +424,16 @@ const ProjectCard = ({ title, description, imageUrl, githubUrl, videoUrl, stack,
                   className="border border-green-600 px-2 py-1 text-xs hover:bg-green-900 transition-all"
                 >
                   VIDEO
+                </a>
+              )}
+              {liveUrl && (
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-green-600 px-2 py-1 text-xs hover:bg-green-900 transition-all"
+                >
+                  LIVE
                 </a>
               )}
             </div>
@@ -1069,12 +1079,12 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                   <TerminalText text="> PROFILE.exe" speed={40} />
                 </div>
                 <div className="pl-4 space-y-1 text-xs sm:text-sm">
-                  <div><TerminalText text="┌─ Systems Engineer" speed={30} /></div>
-                  <div><TerminalText text="├─ Data Science + ML" speed={30} /></div>
-                  <div><TerminalText text="├─ Computer Vision Expert" speed={30} /></div>
-                  <div><TerminalText text="├─ ML Diploma Certified" speed={30} /></div>
-                  <div><TerminalText text="├─ Tech Event Assistant" speed={30} /></div>
-                  <div><TerminalText text="└─ AI Knowledge Extractor" speed={30} /></div>
+                  <div><TerminalText text="┌─ Backend Developer" speed={30} /></div>
+                  <div><TerminalText text="├─ Laravel & PHP Specialist" speed={30} /></div>
+                  <div><TerminalText text="├─ SaaS & Multi-tenant Systems" speed={30} /></div>
+                  <div><TerminalText text="├─ REST API Designer" speed={30} /></div>
+                  <div><TerminalText text="├─ DevOps Learner (Docker + CI/CD)" speed={30} /></div>
+                  <div><TerminalText text="└─ Open to Remote Opportunities" speed={30} /></div>
                 </div>
               </div>
 
@@ -1113,7 +1123,7 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                 <div className="mb-1">└─ CONNECT:</div>
                 <div className="pl-4">
                   <a href="https://github.com/Jose47Morales" target="_blank"><div>&gt; GitHub</div></a>
-                  <a href="https://www.linkedin.com/in/jose-alberto-morales-leon-963935346" target="_blank"><div>&gt; LinkedIn</div></a>
+                  <a href="https://www.linkedin.com/in/jose47morales" target="_blank"><div>&gt; LinkedIn</div></a>
                   <a href="mailto:josemoralesleon58@gmail.com" target="_blank"><div>&gt; Email</div></a>
                 </div>
               </div>
@@ -1127,6 +1137,41 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
             </h2>
             <div className="space-y-6">
               <ProjectCard
+                title="POS System - Discoteca"
+                description="Point of Sale system for nightclub management,
+                including cash register control, sales tracking and
+                detailed business reports."
+                imageUrl="/images/pos-system.png"
+                githubUrl="https://github.com/Jose47Morales/discoteca-pos"
+                stack={["Laravel", "PHP", "MySQL", "TailwindCSS", "Blade"]}
+                features={[
+                  "Cash register & inventory management",
+                  "Sales tracking & detailed reports",
+                  "Role-based user authentication",
+                ]}
+                type="Web Application"
+                year="2025"
+              />
+
+              <ProjectCard
+                title="Nexuterra - SaaS Platform"
+                description="Multi-tenant SaaS platform for heavy machinery
+                management companies. Handles operators, work logs,
+                billing by hour, maintenance, expenses and profitability
+                reports per machine."
+                imageUrl="/images/nexuterra.png"
+                liveUrl="https://nexuterra.com"
+                stack={["Laravel 12", "PHP", "PostgreSQL", "DDD", "Multi-tenancy"]}
+                features={[
+                  "Subdomain-based multi-tenancy",
+                  "Hour-based billing via operator work logs",
+                  "Machine-level profitability reporting",
+                ]}
+                type="SaaS Web Application"
+                year="2026"
+              />
+
+              <ProjectCard
                 title="WhatsApp Chatbot"
                 description="Chatbot for WhatsApp integration"
                 imageUrl="/images/whatsapp.png"
@@ -1138,20 +1183,6 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                   "Integration with Business Logic and Data Sources",
                 ]}
                 type="Conversational Automation System"
-                year="2025"
-              />
-              <ProjectCard
-                title="POS System"
-                description="Point of Sale system for retail"
-                imageUrl="/images/pos-system.png"
-                githubUrl="https://github.com/Jose47Morales/discoteca-pos"
-                stack={["Laravel", "MySQL", "TailwindCSS", "Blade"]}
-                features={[
-                  "Inventory management",
-                  "Sales tracking & reports",
-                  "User authentication",
-                ]}
-                type="Web Application"
                 year="2025"
               />
 
