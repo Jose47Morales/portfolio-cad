@@ -1379,16 +1379,17 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
                     <TerminalText text="GitHub" speed={40} />
                   </div>
                   <div className="text-xs">
-                    <TerminalText text="https://github.com/Jose47Morales" speed={40} /></div>
+                    <TerminalText text="https://github.com/Jose47Morales" speed={40} />
+                  </div>
                 </a>
               </div>
               <div className="border border-green-600 p-4">
-                <a href="https://www.linkedin.com/in/jose-alberto-morales-leon-963935346" target="_blank">
+                <a href="https://www.linkedin.com/in/jose47morales" target="_blank">
                   <div className="text-green-500 mb-2">
                     <TerminalText text="LinkedIn" speed={40} />
                   </div>
                   <div className="text-xs">
-                    <TerminalText text="https://www.linkedin.com/in/jose-alberto-morales-leon-963935346" speed={40} />
+                    <TerminalText text="https://www.linkedin.com/in/jose47morales" speed={40} />
                   </div>
                 </a>
               </div>
