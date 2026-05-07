@@ -1191,39 +1191,41 @@ const ContentArea = ({ currentFile, selectedTool, gridOn, drawColor, shapes, set
         )}
 
         {currentFile === "SKILLS.sketch" && (
-          <div>
-            <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
-              <TerminalText text="CORE_STACK" speed={50} /></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                {skills.slice(0, 5).map((skill, i) => (
-                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={i * 100} />
-                ))}
-              </div>
-              <div>
-                {skills.slice(5).map((skill, i) => (
-                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={(i + 5) * 100} />
-                ))}
+          <>
+            <div>
+              <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
+                <TerminalText text="CORE_STACK" speed={50} /></h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  {skills.slice(0, 5).map((skill, i) => (
+                    <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={i * 100} />
+                  ))}
+                </div>
+                <div>
+                  {skills.slice(5).map((skill, i) => (
+                    <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={(i + 5) * 100} />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
-              <TerminalText text="OTHER_SKILLS" speed={50} /></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                {otherSkills.slice(0, 5).map((skill, i) => (
-                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={i * 100} />
-                ))}
-              </div>
-              <div>
-                {otherSkills.slice(5).map((skill, i) => (
-                  <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={(i + 5) * 100} />
-                ))}
+            <div>
+              <h2 className="text-xl border-b-2 border-green-500 pb-2 mb-4">
+                <TerminalText text="OTHER_SKILLS" speed={50} /></h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  {otherSkills.slice(0, 5).map((skill, i) => (
+                    <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={i * 100} />
+                  ))}
+                </div>
+                <div>
+                  {otherSkills.slice(5).map((skill, i) => (
+                    <SkillBar key={skill.name} name={skill.name} percentage={skill.percentage} delay={(i + 5) * 100} />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
 
         {currentFile === "CERTIFICATIONS.sketch" && (
